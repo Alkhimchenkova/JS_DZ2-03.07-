@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // (function (x) {
+    //     console.log(x)
+    // }(20));
+// самовоспроизводящаяся функция
+//     function display(x=5,y=8) {
+//
+// let z=x*y;
+// console.log(z);
+//
+//     }
+// display();
+
+    // 1. Написать функцию, которая принимает 2 числа и возвра-
+    // щает -1, если первое меньше, чем второе; 1 – если первое
+    // больше, чем второе; и 0 – если числа равны.
+
+    // function func(x,y) {
+    //     if(x>y)
+    //     {
+    //         return 1;
+    //     }
+    //     else if (x<y)
+    //     {
+    //         return -1;
+    //     }
+    //     else
+    //         return 0;
+    //
+    //
+    // }
+    // console.log( func(4,4));
+    // console.log( func(3,4));
+    // console.log( func(5,4));
+
+    // 2. Написать функцию, которая вычисляет факториал пере-
+    // данного ей числа.
+
+    // function  factorial(x) {
+    //     let fact=1;
+    //     for( let i=1; i<=x;i++)
+    //     {
+    //         fact *=i;
+    //     }
+    //     alert(fact);
+    // }
+    // factorial(5);
+
+    // 3. Написать функцию, которая принимает три отдельные
+    // цифры и превращает их в одно число. Например: цифры
+    // 1, 4, 9 превратятся в число 149.
+
+    // let first=prompt('Enter the first number');
+    // let second=prompt('Enter the second number');
+    // let third= prompt('Enter the third number');
+    // function  number( x, y, z) {
+    //     let numb ='';
+    //     numb=x+y+z;
+    //     alert(numb);
+    //
+    // }
+    // number(first,second, third);
+
+    // 4. Написать функцию, которая принимает длину и ширину
+    // прямоугольника и вычисляет его площадь. Если в функцию
+    // передали 1 параметр, то она вычисляет площадь квадрата.
+
+    //
+    // function  Square (x,y) {
+    //     let square=1;
+    //     if (y==undefined)
+    //     {
+    //         square=x*x;
+    //     }
+    //     else {
+    //         square=x*y;
+    //     }
+    //     return square;
+    // }
+    // console.log( Square(4,4));
+    // console.log( Square(3));
+
+
+    // 5. Написать функцию, которая проверяет, является ли пере-
+    // данное ей число совершенным. Совершенное число – это
+    // число, равное сумме всех своих собственных делителей.
+
+
+    // let numb=prompt('Enter the  number');
+    //
+    // function  Perfect(x) {
+    //
+    //     let devisors =[];
+    //     let sum =0;
+    //     for (let i=1; i<x;i++)
+    //     {
+    //         if( x%i==0)
+    //         {
+    //             devisors.push(i);
+    //         }
+    //     }
+    //
+    //     for (  i=0;i<devisors.length;i++)
+    //     {
+    //         sum += devisors[i];
+    //     }
+    //      if(x==sum)
+    //      { return x;
+    //      console.log('perfect number');
+    //      }
+    //
+    //
+    // }
+    // Perfect(numb);
+
+
+
+    // 6. Написать функцию, которая принимает минимальное и
+    // максимальное значения для диапазона, и выводит только
+    // те числа из диапазона, которые являются совершенными.
+    //     Используйте написанную ранее функцию, чтобы узнавать,
+    //     совершенное число или нет.
+
+   //  let min=prompt('Enter the  number');
+   //  let max=prompt('Enter the  number');
+   //
+   //  function  func (x,y) {
+   //      let PerfNumb =[];
+   //
+   //          for (let i=x; i<=y;i++)
+   //      {
+   //          if(Perfect (i)!=undefined)
+   //          {
+   //              PerfNumb.push(i);
+   //          }
+   //
+   //      }
+   //
+   //
+   //     alert( PerfNumb);
+   //  }
+   // func(min,max);
+
+    // 7. Написать функцию, которая принимает время (часы, мину-
+    //     ты, секунды) и выводит его на экран в формате «чч:мм:сс».
+   // Если при вызове функции минуты и/или секунды не были
+    // переданы, то выводить их как 00.
+    // function  Clock(x,y,z) {
+    //     if(x&&y&&z)
+    //     {   alert(x+':'+y+':'+z);}
+    //     else if(x&&y)
+    //     {   alert(x+':'+y+':'+'00');}
+    //     else
+    //     {
+    //      alert(x+':'+'00'+':'+'00');
+    //     }
+    // }
+    // // Clock(6);
+    // // Clock(6, 20);
+    // Clock(6,20,45);
+
+
+
+
+    // 8. Написать функцию, которая принимает часы, минуты и
+    // секунды и возвращает это время в секундах.
+
+    function Time (x,y, z) {
+        let sum=0;
+        if(x!=undefined)
+        {
+          sum=  (x*60)*60
+        }
+        if (y!=undefined)
+        {
+            sum +=(y*60);
+        }
+        if(z!=undefined)
+            sum+=z;
+        // alert(sum+ ' sec');
+        return sum;
+    }
+    // // Time (2,10,3);
+    // Time (5,1);
+
+    // 9. Написать функцию, которая принимает количество секунд,
+    //     переводит их в часы, минуты и секунды и возвращает в
+    // виде строки «чч:мм:сс».
+
+    function Sec(s) {
+        let hours=0;
+        let min=0;
+        let sec=0;
+
+        if(s!=undefined)
+            {
+              hours=  parseInt((s/60)/60);
+                min =parseInt((s/60)%60);
+                sec=parseInt(s%60);
+        if(hours&&min&&sec)
+            {   alert(hours+':'+min+':'+sec);}
+            else if(hours&&min)
+            {   alert(hours+':'+min+':'+'00');}
+            else if (min&&sec)
+            { alert('00'+':'+min+':'+sec);}
+            }
+            else if(hours)  {
+             alert(x+':'+'00'+':'+'00');
+            }
+            else  if (sec)
+        {
+            alert ('00'+':'+'00'+':'+'sec');
+        }
+        else  if (min)
+        {
+            ('00'+':'+min+':'+'00');
+        }
+
+    }
+    // Sec (18060);
+
+    // 10. Написать функцию, которая считает разницу между датами.
+    //     Функция принимает 6 параметров, которые описывают 2
+    // даты, и возвращает результат в виде строки «чч:мм:сс». При
+    // выполнении задания используйте функции из предыду-
+    // щих 2-х заданий: сначала обе даты переведите в секунды,
+    //     узнайте разницу в секундах, а потом разницу переведите
+    // обратно в «чч:мм:сс».
+
+
+    function difference(FirstH, FirstM, FirstS, SecondH, SecondM, SecondS ) {
+       let FirstTime= 0;
+        FirstTime=parseInt(Time(FirstH, FirstM, FirstS));
+       // alert(FirstTime);
+        let SecondTime= 0;
+        SecondTime= parseInt(Time(SecondH, SecondM, SecondS));
+       // alert(SecondTime);
+       let s=0;
+        s= parseInt( SecondTime)-parseInt(FirstTime);
+       // alert(s);
+       Sec(s);
+    }
+    difference(2,4,6,3,0,16);
+
+</script>
+</body>
+</html>
